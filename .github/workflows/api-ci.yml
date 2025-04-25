@@ -25,9 +25,6 @@ jobs:
       with:
         node-version: 18
         cache: 'npm'
-        cache-dependency-path: ./api/package-lock.json
-        # Usamos una clave única para cada ejecución, por ejemplo, basada en el commit hash.
-        cache-key: "node-${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}"
 
     - name: install
       shell: bash
