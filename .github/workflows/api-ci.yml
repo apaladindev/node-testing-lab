@@ -27,12 +27,14 @@ jobs:
         cache: 'npm'
         cache-dependency-path: ./api/package-lock.json
 
-    - name: install
+    - name: Intall dependencies
       shell: bash
       run: npm ci
 
-    - name: run unit test
+    - name: Lint with ESLint
+      shell: bash
+      run: npm run lint
+
+    - name: Run unit test
       shell: bash
       run: npm run test
-
-
