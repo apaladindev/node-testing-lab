@@ -6,7 +6,7 @@ describe('Test for hello enpoint', () => {
   let server = null;
   beforeAll(() => {
     app = createApp();
-    server = app.listen(3001);
+    server = app.listen(0); // Takes a randomly available server port
   });
 
   afterAll(async () => {
